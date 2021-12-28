@@ -1,0 +1,31 @@
+{
+  "name": "tchoo-web",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "start-w": "set PORT=3000 && node build",
+    "start-l": "PORT=3000 node build",
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-node": "^1.0.0-next.56",
+    "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.5",
+    "sass": "^1.45.1",
+    "svelte": "^3.44.0",
+    "svelte-check": "^2.2.6",
+    "svelte-preprocess": "^4.9.4",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@elrondnetwork/erdjs": "^8.0.0",
+    "platform": "^1.3.6"
+  }
+}
