@@ -1,2 +1,4 @@
-# Tchoo-Web
-The website of Tchoo with a link to the WebApp, made with Svelte and SvelteKit.
+# The Tchoos website
+
+## TODO
+[ ] - Tester le systeme de connexion au Wallet Elrond sur Ledger, avec le bouton Maiar App et avec l'extension
