@@ -24,7 +24,6 @@
         />
 
         {#if isMobile()}
-            <!-- TODO -->
             <Button href={appLink + uriCodeEncoded}>Maiar App</Button>
         {/if}
     </div>
