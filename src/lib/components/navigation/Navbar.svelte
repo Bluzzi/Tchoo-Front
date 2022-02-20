@@ -4,7 +4,7 @@
 </script>
 
 <nav>
-    <img src="/img/logo.png" alt="logo">
+    <img src="/img/logo/logo-transparent.png" alt="logo">
     
     <ul>
         <li on:click={() => goto("/")}><H3>Home</H3></li>
