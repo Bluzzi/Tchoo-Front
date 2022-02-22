@@ -5,3 +5,4 @@
 - [ ] Utiliser des vrais events pour les boutons et revoir l'utilisation des href pour les liens
 - [ ] Faire le systeme de connexion et création de compte 
 - [ ] Faire le systeme de connexion au wallet 
+- [ ] Faire en sorte que l'icon scroll fasse des va et vien
