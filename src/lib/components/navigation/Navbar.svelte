@@ -1,61 +1,19 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-    import H3 from "$lib/components/texts/H3.svelte";
+    import Text from "$lib/components/elements/Text.svelte";
+    import Button from "$lib/components/elements/buttons/Button.svelte";
 </script>
 
-<nav>
-    <img src="/img/logo/logo-transparent.png" alt="logo">
+<nav class="pl-5 pr-5 h-16 bg-gray-1 flex justify-around items-center">
+    <Button background={false}><Text type="h1" size="large">THE TCHOOS</Text></Button>
     
-    <ul>
-        <li on:click={() => goto("/")}><H3>Home</H3></li>
-        <li on:click={() => goto("/")}><H3>My pets</H3></li>
+    <ul class="flex">
+        <li><Button background={false}>LOTTERY</Button></li>
+        <li><Button background={false}>LEADERBOARD</Button></li>
+        <li><Button background={false}>THE LAB</Button></li>
     </ul>
+
+    <div class="flex">
+        <Button background={false}>Login</Button>
+        <Button>Sign in</Button>
+    </div>
 </nav>
-
-<style lang="scss">
-    nav {
-        height: $size-navbar-height;
-        width: 100%;
-
-        background-color: $color-primary;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-
-        $padding-x: 30px;
-
-        :first-child {
-            margin-left: $padding-x;
-        }
-
-        :last-child {
-            margin-right: $padding-x;
-        }
-
-        img {
-            height: 75%;
-            width: auto;
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            li {
-                margin: 0 10px;
-
-                cursor: pointer;
-
-                list-style: none;
-
-                color: white;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-    }
-</style>
