@@ -1,7 +1,7 @@
 <script lang="ts">
     import Text from "$lib/components/elements/texts/Text.svelte";
     import Button from "$lib/components/elements/buttons/Button.svelte";
-    import NavItem from "$lib/components/navigation/navbar/NavItem.svelte";
+    import NavItem from "$lib/components/layout/navbar/NavItem.svelte";
     import IconButton from "$lib/components/elements/buttons/IconButton.svelte";
     import { navigating } from "$app/stores";
 

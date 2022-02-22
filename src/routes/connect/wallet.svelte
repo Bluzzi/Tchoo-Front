@@ -1,9 +1,9 @@
 <script lang="ts">
-    import Button from "$lib/components/elements/Button.svelte";
-    import H1 from "$lib/components/texts/H1.svelte";
+    import Button from "$lib/components/elements/buttons/Button.svelte";
+    import Text from "$lib/components/elements/texts/Text.svelte";
     import type { ProofableLogin, WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
     import { WalletService } from "$lib/maiar/wallet/WalletConnection";
-    import MaiarLogin from "$lib/components/special/wallet/MaiarLogin.svelte";
+    import MaiarLogin from "$lib/components/layout/MaiarLogin.svelte";
     import { v4 as uuidV4 } from "uuid";
     import { onMount } from "svelte";
 
@@ -43,7 +43,7 @@
     });
 </script>
 
-<H1 align="center" color="white">Choose the way you want to connect to the Elrond wallet :</H1>
+<Text size="large">Choose the way you want to connect to the Elrond wallet :</Text>
 
 <div class="buttons">
     <Button onClick={() => connect("maiar_app")}>Maiar App</Button>
@@ -53,15 +53,3 @@
 </div>
 
 <div bind:this={tgm}></div>
-
-<style lang="scss">
-    .buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        :global(> .button) {
-            margin: 10px;
-        }
-    }
-</style>

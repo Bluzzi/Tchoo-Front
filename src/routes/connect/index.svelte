@@ -1,5 +1,5 @@
 <script>
-    import P from "$lib/components/texts/P.svelte";
+    import Text from "$lib/components/elements/texts/Text.svelte";
 </script>
 
-<P>Login page</P>
+<Text>Login page</Text>
