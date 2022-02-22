@@ -8,8 +8,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: preprocess({
 		scss: {
-			outputStyle: "compressed",
-			prependData: "@import './src/lib/scss/variables.scss';"
+			outputStyle: "compressed"
 		},
 		postcss: {
 			plugins: [autoprefixer]
