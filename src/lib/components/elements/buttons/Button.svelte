@@ -15,7 +15,7 @@
     const buttonStyles = {
         base: `
             border border-primary-1
-            font-sans text-white uppercase 
+            text-white uppercase 
             px-4 py-2 m-2 rounded shadow-sm
             flex justify-center items-center
         `,
