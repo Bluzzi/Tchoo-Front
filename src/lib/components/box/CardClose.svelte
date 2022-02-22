@@ -11,11 +11,11 @@
         <Text size="large">{title.toUpperCase()}</Text>
 
         <span 
-            class="bg-gray-2 h-10 w-14 rounded flex items-center justify-center"
+            class="bg-gray-2 h-10 w-14 rounded flex items-center justify-center hover:bg-primary-1"
             on:click={() => card.remove()}
         >
             <img 
-                src="/img/icon/navigation/close.svg" 
+                src="/img/icon/navigation/xmark-white.svg" 
                 alt="close" class="h-6 w-6"
             >
         </span>
