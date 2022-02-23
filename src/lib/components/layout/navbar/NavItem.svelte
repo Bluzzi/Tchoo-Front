@@ -13,11 +13,12 @@
 
     navigating.subscribe(event => {
         if(event) active = event.to.pathname === route;
-    });
+    }); // border border-transparent hover:border-b-primary-1
 </script>
 
 <li 
     class="text-white uppercase my-3 mx-4
-    border border-transparent hover:border-b-primary-1"
-    class:border-b-primary-1={active}
+    hover:underline decoration-primary-1 
+    underline-offset-4 decoration-base"
+    class:underline={active}
 ><a href={route}><slot/></a></li>
