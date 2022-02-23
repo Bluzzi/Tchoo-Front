@@ -13,7 +13,7 @@
 
     navigating.subscribe(event => {
         if(event) active = event.to.pathname === route;
-    }); // border border-transparent hover:border-b-primary-1
+    });
 </script>
 
 <li 
