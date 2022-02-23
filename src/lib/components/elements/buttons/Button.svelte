@@ -16,7 +16,7 @@
         base: `
             border border-primary-1
             text-white uppercase 
-            px-4 py-2 m-2 rounded shadow-sm
+            px-5 py-2 m-2 rounded shadow-sm
             flex justify-center items-center
         `,
         actived: `
