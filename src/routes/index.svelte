@@ -19,3 +19,7 @@
 
     <img src="/img/icon/navigation/down-arrows-white.svg" alt="scroll arrows indicator" class="h-6 w-6 mx-auto mt-9">
 </header>
+
+<section class="h-screen bg-gray-2">
+    <!-- TODO -->
+</section>
