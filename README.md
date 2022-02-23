@@ -6,3 +6,5 @@
 - [ ] Faire le systeme de connexion et création de compte 
 - [ ] Faire le systeme de connexion au wallet 
 - [ ] Faire en sorte que l'icon scroll fasse des va et vien
+- [ ] Ajouter des titles à toutes les pages
+- [ ] réecrire le component MaiarLogin
