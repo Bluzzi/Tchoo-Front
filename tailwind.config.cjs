@@ -46,6 +46,9 @@ module.exports = {
             "full": "9999px",
             "none": "0"
         },
+        textDecorationThickness: {
+            base: "3px"
+        },
 
         boxShadow: {
             DEFAULT: "0 0 7px rgba(0 0 0 / 0.2)",
