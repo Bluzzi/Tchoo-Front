@@ -1,23 +1,21 @@
-<script>
-    import H1 from "$lib/components/texts/H1.svelte";
-    import Button from "$lib/components/elements/Button.svelte";
+<script lang="ts">
+    import Button from "$lib/components/elements/buttons/Button.svelte";
 </script>
 
-<H1 color="white">Welcome !</H1>
+<header class="h-navbar-adjust pt-32 bg-sun-tornado-animated bg-fixed bg-cover bg-center lg:h-screen lg:flex lg:justify-center lg:flex-col">
+    <img 
+        src="/img/banner/banner-white-transparent.png" 
+        alt="The Tchoos banner"
+        class="h-40 mx-auto lg:h-auto lg:w-9/12"
+    />
 
-<div class="buttons">
-    <Button href="/connect">Login to the Tchoos</Button>
-    <Button href="/connect/wallet">Connect to Elrond Wallet</Button>
-</div>
+    <img 
+        src="/img/other/triple-tchoos.png" 
+        alt="Triple Tchoos"
+        class="mx-auto mb-10 lg:w-11/12 lg:mb-32"
+    />
 
-<style lang="scss">
-    .buttons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    <span class="w-max mx-auto block"><Button>Mint a NFT</Button></span>
 
-        :global(> .button) {
-            margin: 0 10px;
-        }
-    }
-</style>
+    <img src="/img/icon/navigation/down-arrows-white.svg" alt="scroll arrows indicator" class="h-6 w-6 mx-auto mt-9">
+</header>
