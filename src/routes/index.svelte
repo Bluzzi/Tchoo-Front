@@ -17,7 +17,7 @@
 
     <span class="w-max mx-auto block"><Button>Mint a NFT</Button></span>
 
-    <img src="/img/icon/navigation/down-arrows-white.svg" alt="scroll arrows indicator" class="h-6 w-6 mx-auto mt-9">
+    <img src="/img/icon/navigation/down-arrows-white.svg" alt="scroll arrows indicator" class="h-6 w-6 mx-auto mt-9 animate-bounce">
 </header>
 
 <section class="h-screen bg-gray-2">
