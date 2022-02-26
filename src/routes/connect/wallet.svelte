@@ -1,13 +1,14 @@
 <script lang="ts">
     import Button from "$lib/components/elements/buttons/Button.svelte";
     import Text from "$lib/components/elements/texts/Text.svelte";
+    import Card from "$lib/components/container/Card.svelte";
     import type { ProofableLogin, WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
     import { WalletService } from "$lib/maiar/wallet/WalletConnection";
     import MaiarLogin from "$lib/components/layout/MaiarLogin.svelte";
     import { v4 as uuidV4 } from "uuid";
     import { onMount } from "svelte";
 
-    let tgm: HTMLDivElement;
+    let appLogin: HTMLDivElement;
 
     async function connect(providerId: WalletProviderId) : Promise<void> {
         await WalletService.getInstance().init(providerId);
@@ -16,7 +17,7 @@
             const maiarLogin = await WalletService.getInstance().login(uuidV4()); // TODO : change with Tchoos login token
 
             new MaiarLogin({
-                target: tgm,
+                target: appLogin,
                 props: {
                     uriCode: maiarLogin.uriCode,
                     appLink: maiarLogin.appLink
@@ -43,13 +44,40 @@
     });
 </script>
 
-<Text size="large">Choose the way you want to connect to the Elrond wallet :</Text>
+<div bind:this={appLogin}></div>
 
-<div class="buttons">
-    <Button onClick={() => connect("maiar_app")}>Maiar App</Button>
-    <Button onClick={() => connect("maiar_extension")}>Maiar Extension</Button>
-    <Button onClick={() => connect("hardware")}>Ledger</Button>
-    <Button onClick={() => connect("web")}>Web Wallet</Button>
+<div class="h-navbar-adjust w-full flex items-center justify-center">
+    <div class="w-96">
+        <Card>
+            <div class="flex items-center flex-col">
+                <Text size="xl">LINK WALLET</Text>
+
+                <div class="mt-4 flex flex-col items-center w-4/6">
+                    <Button 
+                        onClick={() => connect("maiar_app")} 
+                        icon="/img/icon/wallet/app.svg" 
+                        iconLeft fullWidth uppercase={false}
+                    >Maiar App</Button>
+
+                    <Button 
+                        onClick={() => connect("maiar_extension")} 
+                        icon="/img/icon/wallet/extension.svg" 
+                        iconLeft fullWidth uppercase={false}
+                    >Maiar Extension</Button>
+
+                    <Button 
+                        onClick={() => connect("hardware")} 
+                        icon="/img/icon/wallet/ledger.svg" 
+                        iconLeft fullWidth uppercase={false}
+                    >Ledger</Button>
+
+                    <Button 
+                        onClick={() => connect("web")} 
+                        icon="/img/icon/wallet/web.svg"  
+                        iconLeft fullWidth uppercase={false}
+                    >Web Wallet</Button>
+                </div>
+            </div>
+        </Card>
+    </div>
 </div>
-
-<div bind:this={tgm}></div>
