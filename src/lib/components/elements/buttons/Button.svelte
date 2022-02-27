@@ -1,67 +1,48 @@
 <script lang="ts">
-    // Parameters :
-    export let onClick: () => void = () => {};
+    import { createEventDispatcher } from "svelte";
 
-    export let href: string | null = null;
-    export let target: "internal" | "external" = "internal";
-
-    export let background = true;
-
-    export let disabled = false;
+    // Basic attributes :
+    export let href: string | null = "javascript:void(0);";
+    export let target: "_self" | "_blank" = "_self";
 
     export let icon: string | null = null;
 
-    // Button styles :
-    const buttonStyles = {
-        base: `
-            border border-primary-1
-            text-white uppercase 
-            px-5 py-2 m-2 rounded shadow-sm
-            flex justify-center items-center
-        `,
-        actived: `
-            bg-primary-1 hover:scale-98
-            transition-all delay-75
-        `,
-        disabled: `
-            bg-transparent
-        `
+    // Styles attributes :
+    type Theme = "solid" | "outline" | "void";
+    export let theme: Theme = "solid";
+
+    export let uppercase = true;
+    export let fullWidth = false;
+
+    export let iconLeft = false;
+
+    // Event dispatcher :
+    const dispatch = createEventDispatcher();
+
+    // Button CSS definition :
+    const baseStyle = `flex justify-center items-center text-white px-5 py-2 
+        rounded transition-all delay-75 hover:scale-98 relative`;
+
+    const variantsStyle: { [key in Theme]: string } = {
+        solid: "bg-primary-1 border border-primary-1 shadow-sm",
+        outline: "border border-primary-1 shadow-sm",
+        void: ""
     }
-
-    const disabledStyle = buttonStyles[disabled ? "disabled" : "actived"];
-
-    let finalStyle = buttonStyles.base + disabledStyle;
-    finalStyle = background ? 
-        finalStyle : 
-        finalStyle.replace(/bg-primary-1|bg-transparent|border|shadow/gm, "");
-
-    // Icon style :
-    const iconStyle = "h-5 w-5 mr-2";
 </script>
 
-{#if href}
-    <a {href} target={target === "external" ? "_blank" : ""}>
-        <button 
-            class={finalStyle} 
-            disabled={disabled}
+<a 
+    {href} {target} 
+    on:click={e => dispatch("click", { nativeEvent: e })}
+    
+    class={baseStyle + " " + variantsStyle[theme]}
+    class:uppercase={uppercase} class:w-full={fullWidth} 
+    class:w-max={!fullWidth}
+>
+    {#if icon}
+        <img src={icon} alt="icon" class="h-5 w-5 mr-2" 
+            class:absolute={iconLeft} class:left-2={iconLeft}
         >
-            {#if icon}
-                <img src={icon} alt="logo" class={iconStyle}>
-            {/if}
+    {/if}
 
-            <slot/>
-        </button>
-    </a>
-{:else}
-    <button 
-        on:click={() => onClick()} 
-        class={finalStyle} 
-        disabled={disabled}
-    >
-        {#if icon}
-            <img src={icon} alt="logo" class={iconStyle}>
-        {/if}
-
-        <slot/>
-    </button>
-{/if}
+    <slot/>
+</a>

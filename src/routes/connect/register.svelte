@@ -34,7 +34,7 @@
                 </div>
     
                 <div class="flex items-center justify-center flex-col w-4/6">
-                    <Button onClick={() => apiRequest()} fullWidth={true}>Register</Button>
+                    <Button on:click={() => apiRequest()} fullWidth>Register</Button>
                     <Text size="small">Already have an account ? <Link href="/connect">Login</Link></Text>
                 </div>
             </div>

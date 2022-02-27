@@ -54,25 +54,25 @@
 
                 <div class="mt-4 flex flex-col items-center w-4/6">
                     <Button 
-                        onClick={() => connect("maiar_app")} 
+                        on:click={() => connect("maiar_app")} 
                         icon="/img/icon/wallet/app.svg" 
                         iconLeft fullWidth uppercase={false}
                     >Maiar App</Button>
 
                     <Button 
-                        onClick={() => connect("maiar_extension")} 
+                        on:click={() => connect("maiar_extension")} 
                         icon="/img/icon/wallet/extension.svg" 
                         iconLeft fullWidth uppercase={false}
                     >Maiar Extension</Button>
 
                     <Button 
-                        onClick={() => connect("hardware")} 
+                        on:click={() => connect("hardware")} 
                         icon="/img/icon/wallet/ledger.svg" 
                         iconLeft fullWidth uppercase={false}
                     >Ledger</Button>
 
                     <Button 
-                        onClick={() => connect("web")} 
+                        on:click={() => connect("web")} 
                         icon="/img/icon/wallet/web.svg"  
                         iconLeft fullWidth uppercase={false}
                     >Web Wallet</Button>
