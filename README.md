@@ -6,10 +6,11 @@
     - [ ] Card : check la propreté du code
     - [ ] CardClose : check la propreté du code, revoir son fonctionnement et son style
     - [x] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
-    - [ ] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
-    - [ ] Input : check la propreté du code
+    - [x] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
+    - [ ] Input : retirer les margins
     - [ ] Navbar : check la propreté du code
     - [ ] MaiarLogin : réécriture complète, utiliser un autre package pour la création de QR code
+    - [ ] Notifications : véirifer si les notifications se retire dans le bon sens
 - [ ] Account (API Endpoint) :
     - [ ] Voir si il est possibler de réduire la taille actuel du code
     - [ ] Créer des functions pour les requêtes suivantes : 
