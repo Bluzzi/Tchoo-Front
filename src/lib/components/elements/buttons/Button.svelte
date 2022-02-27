@@ -31,7 +31,7 @@
 </script>
 
 <a 
-    {href} {target} 
+    {href} target={target === "_blank" ? "_blank" : ""} 
     on:click={e => dispatch("click", { nativeEvent: e })}
     
     class={baseStyle + " " + variantsStyle[theme]}
