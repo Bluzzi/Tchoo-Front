@@ -33,6 +33,6 @@
 <span class="fixed right-5 bottom-5 hidden lg:block">
     <IconButton 
         src={active ? "/img/icon/navigation/xmark-white.svg" : "/img/icon/navigation/bars-white.svg"} 
-        alt="Open navbar" onClick={() => active = !active}
+        alt="Open navbar" on:click={() => active = !active}
     />
 </span>
