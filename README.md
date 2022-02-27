@@ -5,7 +5,7 @@
     - [ ] Text : ajouter une nouvelle taille et potentillement des fonts différentes
     - [ ] Card : check la propreté du code
     - [ ] CardClose : check la propreté du code, revoir son fonctionnement et son style
-    - [ ] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
+    - [x] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [ ] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [ ] Input : check la propreté du code
     - [ ] Navbar : check la propreté du code
