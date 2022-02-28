@@ -6,6 +6,7 @@ module.exports = {
 
             "white": "#ffffff",
             "black": "black",
+            "black-transparent": "rgba(0 0 0 / 0.7)",
 
             "primary": {
                 1: "#F45776", // real primary
