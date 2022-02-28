@@ -95,7 +95,7 @@ export async function updateInfo() : Promise<ResponseStatus> {
     });
 
     return await request(response, "Account informations updated", () => {
-        username.set(response.body["username"] ?? "");
-        wallet.set({ address: response.body["wallet"] ?? "", signature: get(wallet).signature });
+        username.set(response.body["username"]);
+        wallet.set({ address: response.body["wallet"], signature: get(wallet).signature });
     });
 }
