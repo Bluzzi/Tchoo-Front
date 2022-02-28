@@ -55,7 +55,7 @@
             <div class="flex items-center flex-col">
                 <Text size="xl">LINK WALLET</Text>
 
-                <div class="mt-4 flex flex-col items-center w-4/6">
+                <div class="mt-4 flex flex-col items-center justify-between w-4/6 h-52">
                     <Button 
                         on:click={() => connect("maiar_app")} 
                         icon="/img/icon/wallet/app.svg" 
