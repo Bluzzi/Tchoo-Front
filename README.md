@@ -2,13 +2,15 @@
 
 ## TODO
 - [ ] Composants : 
+    - [x] Text : ajouter une nouvelle taille et potentillement des fonts différentes
     - [x] Card : check la propreté du code
+    - [x] Popup : check la propreté du code, revoir son fonctionnement et son style
     - [x] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [x] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [x] Input : retirer les margins
     - [ ] Navbar : check la propreté du code
-    - [ ] MaiarLogin : réécriture complète, utiliser un autre package pour la création de QR code
-    - [ ] Notifications : véirifer si les notifications se retire dans le bon sens
+    - [x] MaiarLogin : réécriture complète, utiliser un autre package pour la création de QR code
+    - [x] Notifications : véirifer si les notifications se retire dans le bon sens
 - [ ] Account (API Endpoint) :
     - [ ] Voir si il est possibler de réduire la taille actuel du code
     - [ ] Créer des functions pour les requêtes suivantes : 
