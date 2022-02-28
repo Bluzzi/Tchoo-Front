@@ -5,15 +5,6 @@ import type { ResponseStatus } from "../AdapterInterfaces";
 import { apiLink } from "../Information";
 import errors from "../ErrorsList.json";
 
-// Stores :
-export const token = writable(browser && localStorage.getItem("token"));
-export const username = writable(browser && localStorage.getItem("username"));
-export const wallet = writable(browser && localStorage.getItem("wallet"));
-
-token.subscribe(value => browser && value && localStorage.setItem("token", value));
-username.subscribe(value => browser && value && localStorage.setItem("username", value));
-wallet.subscribe(value => browser && value && localStorage.setItem("wallet", value));
-
 // API requests :
 export async function register(uname: string, password: string) : Promise<ResponseStatus> {
     const response = await jsonFetch(apiLink + "/account/create", {
