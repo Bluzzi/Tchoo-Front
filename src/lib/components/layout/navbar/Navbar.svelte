@@ -5,23 +5,12 @@
     import IconButton from "$lib/components/elements/buttons/IconButton.svelte";
     import { navigating } from "$app/stores";
     import { token, username, wallet } from "$lib/api/AccountStore";
-    import { goto } from "$app/navigation";
+    import { gotoConnection } from "$lib/utils/Redirect";
 
     // Active state for mobile device :
     let active = true;
 
     navigating.subscribe(() => active = false);
-
-    // Redirect function for login/register pages :
-    function connect(type: "login" | "register") : void {
-        const currentPath = window.location.pathname;
-
-        const route = type === "login" ? "/connect" : "/connect/register";
-        const redirect = currentPath && !["/", "/connect", "/connect/register"].includes(currentPath) ? 
-            "?redirect=" + currentPath : "";
-
-        goto(route + redirect);
-    }
 </script>
 
 <nav 
@@ -65,11 +54,12 @@
             {/if}
         {:else}
             <!-- Not login -->
-            <Button theme="void" on:click={() => connect("login")}>Login</Button>
+            <!-- svelte-ignore missing-declaration -->
+            <Button theme="void" on:click={() => gotoConnection("login", window.location)}>Login</Button>
 
             <span class="w-2"></span>
 
-            <Button on:click={() => connect("register")}>Sign up</Button>
+            <Button on:click={() => gotoConnection("register", window.location)}>Sign up</Button>
         {/if}
     </div>
 </nav>
