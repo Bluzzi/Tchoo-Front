@@ -1,7 +1,7 @@
 <script lang="ts">
     import { createEventDispatcher } from "svelte";
 
-    // Parameters :
+    // Attributes :
     export let title: string;
 
     export let type = "text";
@@ -22,7 +22,7 @@
     <label for={type} class="text-sm text-white uppercase ml-1 font-bold">{title}</label>
     <input 
         type={type} placeholder={placeholder} 
-        class="rounded outline-none px-4 py-3 border-lg border-white focus:border-primary-1"
+        class="rounded outline-none px-3 py-2 border-lg border-white focus:border-primary-1"
         on:change={event => dispatch("change", { value, nativeEvent: event })}
         on:input={handleInput}
     >

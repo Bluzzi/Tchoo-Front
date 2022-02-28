@@ -7,7 +7,7 @@
     - [x] Card : check la propreté du code
     - [x] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [x] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
-    - [ ] Input : retirer les margins
+    - [x] Input : retirer les margins
     - [ ] Navbar : check la propreté du code
     - [ ] MaiarLogin : réécriture complète, utiliser un autre package pour la création de QR code
     - [ ] Notifications : véirifer si les notifications se retire dans le bon sens

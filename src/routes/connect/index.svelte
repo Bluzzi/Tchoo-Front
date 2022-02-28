@@ -28,7 +28,7 @@
             <div class="flex items-center justify-between flex-col h-96">
                 <Text size="xl">LOGIN</Text>
     
-                <div class="h-44 flex justify-between flex-col w-5/6">
+                <div class="h-40 flex justify-between flex-col w-10/12">
                     <Input title="Username" type="username" bind:value={username}/>
                     <Input title="Password" type="password" bind:value={password}/>
                 </div>
