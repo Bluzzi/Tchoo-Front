@@ -8,3 +8,17 @@ export function redirectByParam(location: Location) : void {
 
     goto(param ? param : "/");
 }
+
+/**
+ * Goto a connection page (login or register) with a redirect 
+ * parameter defined by the current page.
+ */
+export function gotoConnection(type: "login" | "register", location: Location) : void {
+    const currentPath = location.pathname;
+
+    const route = type === "login" ? "/connect" : "/connect/register";
+    const redirect = currentPath && !["/", "/connect", "/connect/register"].includes(currentPath) ? 
+        "?redirect=" + currentPath : "";
+
+    goto(route + redirect);
+}
