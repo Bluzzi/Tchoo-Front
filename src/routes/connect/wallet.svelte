@@ -45,6 +45,8 @@
     });
 </script>
 
+<Title text="Link wallet"/>
+
 <div bind:this={appLogin}></div>
 
 <div class="h-navbar-adjust w-full flex items-center justify-center">
