@@ -4,6 +4,7 @@
     import Card from "$lib/components/container/Card.svelte";
     import Input from "$lib/components/elements/form/Input.svelte";
     import Button from "$lib/components/elements/buttons/Button.svelte";
+    import Title from "$lib/components/elements/Title.svelte";
     import { register } from "$lib/api/endpoints/Account";
     import { redirectByParam } from "$lib/utils/Redirect";
     import { pushNotification } from "$lib/components/layout/notification/Notifications";
@@ -21,6 +22,8 @@
         }
     } 
 </script>
+
+<Title text="Register"/>
 
 <div class="flex items-center justify-center h-navbar-adjust">
     <div class="w-96 lg:w-11/12">

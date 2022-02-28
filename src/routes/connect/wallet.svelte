@@ -2,6 +2,7 @@
     import Button from "$lib/components/elements/buttons/Button.svelte";
     import Text from "$lib/components/elements/texts/Text.svelte";
     import Card from "$lib/components/container/Card.svelte";
+    import Title from "$lib/components/elements/Title.svelte";
     import type { ProofableLogin, WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
     import { WalletService } from "$lib/maiar/wallet/WalletConnection";
     import MaiarLogin from "$lib/components/layout/MaiarLogin.svelte";
