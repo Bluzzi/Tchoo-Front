@@ -52,7 +52,9 @@
                     theme="outline" uppercase={false}
                     icon="/img/icon/other/link-primary.svg" 
                     href="/connect/wallet"
-                >{$wallet.slice(0, 3)}...{$wallet.slice($wallet.length - 4)}</Button>
+                >   
+                    {$wallet.address.slice(0, 3)}...{$wallet.address.slice($wallet.address.length - 4)}
+                </Button>
             {:else}
                 <!-- Login but wallet not linked -->
                 <Button theme="void" uppercase={false}>@{$username}</Button>
