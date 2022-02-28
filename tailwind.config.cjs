@@ -23,13 +23,14 @@ module.exports = {
         },
 
         fontFamily: {
-            "sans": ["Roboto", "sans-serif"]
+            "sans": ["Roboto", "sans-serif"],
+            "title": ["'Baloo 2'", "Roboto", "sans-serif"]
         },
         fontSize: {
             "sm": "15px",
             "base": "20px",
             "lg": "25px",
-            "xl": "48px"
+            "xl": "56px"
         },
 
         backgroundImage: {

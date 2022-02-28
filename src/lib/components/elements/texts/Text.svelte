@@ -5,8 +5,8 @@
     const styles = {
         small: "text-sm",
         base: "",
-        large: "text-lg text-bold",
-        xl: "text-xl text-bold"
+        large: "text-lg text-bold font-title",
+        xl: "text-xl text-bold font-title"
     }
 </script>
 

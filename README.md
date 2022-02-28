@@ -2,8 +2,6 @@
 
 ## TODO
 - [ ] Composants : 
-    - [ ] Text : ajouter une nouvelle taille et potentillement des fonts différentes
-    - [ ] CardClose : check la propreté du code, revoir son fonctionnement et son style
     - [x] Card : check la propreté du code
     - [x] Button : clean total du code, repenser les différents types de bouton, utilisation de vrais event et revoir l'utilisation des href pour les liens
     - [x] IconButton : utilisation de vrais event et revoir l'utilisation des href pour les liens
