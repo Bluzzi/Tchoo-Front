@@ -6,8 +6,9 @@
     import type { ProofableLogin, WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
     import { WalletService } from "$lib/maiar/wallet/WalletConnection";
     import MaiarLogin from "$lib/components/layout/MaiarLogin.svelte";
-    import { v4 as uuidV4 } from "uuid";
     import { onMount } from "svelte";
+    import { get } from "svelte/store";
+    import { token } from "$lib/api/AccountStore";
 
     let appLogin: HTMLDivElement;
 
@@ -15,7 +16,7 @@
         await WalletService.getInstance().init(providerId);
 
         if(providerId === "maiar_app"){
-            const maiarLogin = await WalletService.getInstance().login(uuidV4()); // TODO : change with Tchoos login token
+            const maiarLogin = await WalletService.getInstance().login(get(token));
 
             new MaiarLogin({
                 target: appLogin,
@@ -25,7 +26,7 @@
                 }
             });
         } else {
-            WalletService.getInstance().login(uuidV4()); // TODO : change with Tchoos login token
+            WalletService.getInstance().login(get(token));
         }
     }
 
