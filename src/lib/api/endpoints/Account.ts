@@ -60,7 +60,12 @@ export async function linkWallet(address: string, signature: string) : Promise<R
     });
 
     return await request(response, "The wallet has been linked", () => {
-        wallet.set({ address: address, signature: signature });
+        const walletData = get(wallet);
+
+        walletData.address = address;
+        walletData.signature = signature;
+
+        wallet.set(walletData);
     });
 }
 
@@ -96,6 +101,10 @@ export async function updateInfo() : Promise<ResponseStatus> {
 
     return await request(response, "Account informations updated", () => {
         username.set(response.body["username"]);
-        wallet.set({ address: response.body["wallet"], signature: get(wallet).signature });
+
+        const walletData = get(wallet);
+        walletData.address = response.body["wallet"];
+
+        wallet.set(walletData);
     });
 }
