@@ -17,10 +17,11 @@ import type {
     SerializableProviderStorage,
     MaiarAppLoginData
 } from "./WalletTypes";
-import { walletAuth } from "./WalletStore";
+import { wallet } from "$lib/api/AccountStore";
 import { get } from "svelte/store";
 import { Buffer } from "buffer";
 import { walletServiceConfig } from "$lib/maiar/wallet/WalletConfig";
+import { linkWallet } from "$lib/api/endpoints/Account";
 
 class EmptyProvider implements IDappProvider {
     init = () => new Promise<boolean>((resolve) => resolve(true));
@@ -241,7 +242,7 @@ export class WalletService {
     private loadFromStorage() : SerializableProviderStorage | null {
         if(typeof window === "undefined") return null;
 
-        const serialized = get(walletAuth);
+        const serialized = JSON.stringify(get(wallet));
 
         return serialized ? (JSON.parse(serialized) as SerializableProviderStorage) : null;
     }
@@ -253,11 +254,11 @@ export class WalletService {
             addressIndex: addressIndex,
         }
 
-        walletAuth.set(JSON.stringify(serializableStorage));
+        wallet.set(serializableStorage);
     }
 
     private clearStorage() : void {
-        walletAuth.set("");
+        wallet.set(null);
     }
 
     // ERROR METHODS CHECKERS
