@@ -277,8 +277,11 @@ export class WalletService {
 
     public onLogin(proofableLogin: ProofableLogin) : void {
         console.log("Successful connection with " + this.providerId + " provider, wallet informations :");
-        console.log(this.getAddress());
-        console.log(this.getSignature());
+        console.log("Address : " + proofableLogin.address);
+        console.log("Signature : " + proofableLogin.signature);
+
+        // Request for link the API :
+        linkWallet(proofableLogin.address, proofableLogin.signature);
     }
 
     public onLogout() : void {
