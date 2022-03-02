@@ -38,6 +38,9 @@
     
                 <div class="flex items-center justify-center flex-col w-4/6">
                     <Button on:click={() => apiRequest()} fullWidth>Login</Button>
+
+                    <span class="h-3"></span>
+
                     <Text size="small">Not account yet ? <Link href="/connect/register">Register</Link></Text>
                 </div>
             </div>
