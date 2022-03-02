@@ -18,6 +18,7 @@ module.exports = {
                 2: "#220836"
             },
             "gray": {
+                0: "#303030", // for hr, micro-elements...
                 1: "#29272B", // for elements (button, cards...)
                 2: "#231F25" // for base background (navbar, section...)
             }
@@ -67,6 +68,7 @@ module.exports = {
 
         extend: {
             height: {
+                "0.5": "0.125rem",
                 "navbar": "4rem",
                 "navbar-adjust": "calc(100vh - 4rem)"
             },
