@@ -13,4 +13,8 @@
 - [ ] Revoir le responsive sur iPhone :
     - [ ] Le design : remonter un peu les elements sur le header de la premiere page
     - [ ] Le bug du bouton "Mint a NFT" sur la premiere page qui passe par dessus la navbar
-- [x] Rendre la synchronisation entre les stores et le local storage + simple  
+- [x] Rendre la synchronisation entre les stores et le local storage + simple
+- [ ] Créer une autre taille de boutton pour des trucs comme "Mint a NFT"
+- [ ] Créer un carrousselle pour les images sur la page d'accueil avec le top des NFT
+- [ ] Utiliser les nouvelles images
+- [ ] Error page
