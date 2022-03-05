@@ -4,7 +4,7 @@ import { token, username, wallet } from "../stores/Account";
 import { request, ResponseStatus } from "../RequestManager";
 import { get } from "svelte/store";
 
-export async function register(uname: string, password: string) : Promise<ResponseStatus> {
+export async function register(uname: string, password: string) : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/create", {
         method: "POST",
         body: JSON.stringify({
@@ -19,7 +19,7 @@ export async function register(uname: string, password: string) : Promise<Respon
     });
 }
 
-export async function login(uname: string, password: string) : Promise<ResponseStatus> {
+export async function login(uname: string, password: string) : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/login", {
         method: "POST",
         body: JSON.stringify({
@@ -34,7 +34,7 @@ export async function login(uname: string, password: string) : Promise<ResponseS
     });
 }
 
-export async function logout() : Promise<ResponseStatus> {
+export async function logout() : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/logout", {
         method: "POST",
         body: JSON.stringify({
@@ -49,7 +49,7 @@ export async function logout() : Promise<ResponseStatus> {
     })
 }
 
-export async function linkWallet(address: string, signature: string) : Promise<ResponseStatus> {
+export async function linkWallet(address: string, signature: string) : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/link_wallet", {
         method: "POST", 
         body: JSON.stringify({
@@ -69,7 +69,7 @@ export async function linkWallet(address: string, signature: string) : Promise<R
     });
 }
 
-export async function isTokenValid() : Promise<ResponseStatus> {
+export async function isTokenValid() : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/is_token_valid", {
         method: "POST",
         body: JSON.stringify({
@@ -80,7 +80,7 @@ export async function isTokenValid() : Promise<ResponseStatus> {
     return await request(response, "Token is valid");
 }
 
-export async function isWalletLinked() : Promise<ResponseStatus> {
+export async function isWalletLinked() : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/is_wallet_linked", {
         method: "POST",
         body: JSON.stringify({
@@ -91,7 +91,7 @@ export async function isWalletLinked() : Promise<ResponseStatus> {
     return await request(response, "Wallet is linked");
 }
 
-export async function updateInfo() : Promise<ResponseStatus> {
+export async function updateInfo() : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/get_infos", {
         method: "POST",
         body: JSON.stringify({
