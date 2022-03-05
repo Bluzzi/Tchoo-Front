@@ -1,6 +1,6 @@
 import { get } from "svelte/store";
 import { writable } from "svelte-local-storage-store";
-import { isTokenValid, updateInfo } from "./endpoints/Account";
+import { isTokenValid, updateInfo } from "../endpoints/Account";
 import { gotoConnection } from "$lib/utils/Redirect";
 import type { WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
 

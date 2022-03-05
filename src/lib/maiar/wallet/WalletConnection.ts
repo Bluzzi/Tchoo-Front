@@ -17,7 +17,7 @@ import type {
     SerializableProviderStorage,
     MaiarAppLoginData
 } from "./WalletTypes";
-import { wallet } from "$lib/api/AccountStore";
+import { wallet } from "$lib/api/stores/Account";
 import { get } from "svelte/store";
 import { Buffer } from "buffer";
 import { walletServiceConfig } from "$lib/maiar/wallet/WalletConfig";

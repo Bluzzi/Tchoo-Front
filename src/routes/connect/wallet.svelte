@@ -8,7 +8,7 @@
     import MaiarLogin from "$lib/components/layout/MaiarLogin.svelte";
     import { onMount } from "svelte";
     import { get } from "svelte/store";
-    import { token } from "$lib/api/AccountStore";
+    import { token } from "$lib/api/stores/Account";
 
     let appLogin: HTMLDivElement;
 

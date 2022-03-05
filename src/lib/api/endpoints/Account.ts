@@ -1,6 +1,6 @@
 import { jsonFetch } from "$lib/utils/Fetch";
 import { apiLink } from "../Information";
-import { token, username, wallet } from "../AccountStore";
+import { token, username, wallet } from "../stores/Account";
 import { request, ResponseStatus } from "../RequestManager";
 import { get } from "svelte/store";
 

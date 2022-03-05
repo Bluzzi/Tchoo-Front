@@ -4,7 +4,7 @@
     import NavItem from "$lib/components/layout/navbar/NavItem.svelte";
     import IconButton from "$lib/components/elements/buttons/IconButton.svelte";
     import { navigating } from "$app/stores";
-    import { token, username, wallet } from "$lib/api/AccountStore";
+    import { token, username, wallet } from "$lib/api/stores/Account";
     import { gotoConnection } from "$lib/utils/Redirect";
 
     // Active state for mobile device :

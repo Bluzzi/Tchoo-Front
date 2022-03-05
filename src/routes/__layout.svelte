@@ -2,9 +2,9 @@
     import Navbar from "$lib/components/layout/navbar/Navbar.svelte";
     import MediaLinks from "$lib/components/layout/MediaLinks.svelte";
     import Notifications from "$lib/components/layout/notification/Notifications.svelte";
-    import { updateConnection } from "$lib/api/AccountStore";
-    import "/static/css/tailwind.css"
+    import { updateConnection } from "$lib/api/stores/Account";
     import { onMount } from "svelte";
+    import "/static/css/tailwind.css"
 
     onMount(() => window && updateConnection(window.location));
 </script>
