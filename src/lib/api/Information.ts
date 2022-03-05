@@ -1,1 +1,1 @@
-export const apiLink = "http://45.145.164.115:8080/api";
+export const apiLink = "https://api.tchoo.pet/v1";
