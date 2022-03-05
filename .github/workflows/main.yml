@@ -1,4 +1,4 @@
-name: Auto update on the server
+name: Update on the server after a commit on the main branch
 
 on:
   push:
