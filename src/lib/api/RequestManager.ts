@@ -1,21 +1,23 @@
 import type { Response } from "$lib/utils/Fetch";
 
-export interface ResponseStatus {
+export interface ResponseStatus<T> {
     success: boolean;
     message: string;
+    body?: T;
 }
 
 export async function request<T>(
     response: Response<T>, successMessage: string, 
     successCallback: CallableFunction | null = null
-) : Promise<ResponseStatus> {
+) : Promise<ResponseStatus<T>> {
     if(response.status === 200){
         if(response.body["success"] === true){
             if(successCallback) successCallback();
             
             return {
                 success: true,
-                message: successMessage
+                message: successMessage,
+                body: response.body
             }
         } else {
             return {
