@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Bungee";
+    src: url("/fonts/Bungee-Regular.woff") format("woff"),
+        url("/fonts/Bungee-Regular.woff2") format("woff2");
+}

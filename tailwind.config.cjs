@@ -26,7 +26,7 @@ module.exports = {
 
         fontFamily: {
             "sans": ["Roboto", "sans-serif"],
-            "title": ["'Baloo 2'", "Roboto", "sans-serif"]
+            "title": ["Bungee", "Roboto", "sans-serif"]
         },
         fontSize: {
             "sm": "15px",
