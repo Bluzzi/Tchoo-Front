@@ -1,0 +1,1 @@
+<img src="/img/icon/navigation/loading.svg" alt="loading" class="h-48 w-auto">
