@@ -16,5 +16,12 @@
 - [x] Rendre la synchronisation entre les stores et le local storage + simple
 - [ ] Créer une autre taille de boutton pour des trucs comme "Mint a NFT"
 - [ ] Créer un carrousselle pour les images sur la page d'accueil avec le top des NFT
-- [ ] Utiliser les nouvelles images
+- [x] Utiliser les nouvelles images
 - [ ] Error page
+- [x] Créer un composant line
+- [ ] Leaderboard :
+    - [ ] Accès à une page précise via un lien
+    - [ ] Possibilité de choisir sa page avec les ...
+    - [ ] Responsive
+- [ ] Créer un composant Footer
+- [ ] Créer un composant PageBottom
