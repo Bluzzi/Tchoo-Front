@@ -20,7 +20,11 @@
     lg:h-screen lg:flex-col lg:justify-evenly lg:fixed lg:z-50"
 >
     <!-- Title -->
-    <Button theme="void" href="/"><Text type="h1" size="large">THE TCHOOS</Text></Button>
+    <div class="flex items-center">
+        <a href="/"><img src="/img/logo/logo-transparent.png" alt="logo" class="h-7 w-auto"></a>
+
+        <Button theme="void" href="/"><Text type="h1" size="large">THE TCHOOS</Text></Button>
+    </div>
     
     <!-- Navbar elements -->
     <ul class="flex lg:flex-col lg:items-center">
