@@ -6,9 +6,9 @@
 
     const styles = {
         small: "text-sm",
-        base: "",
-        large: "text-lg text-bold font-title",
-        xl: "text-xl text-bold font-title"
+        base: "text-base",
+        large: "text-lg font-title",
+        xl: "text-xl font-title"
     }
 </script>
 
