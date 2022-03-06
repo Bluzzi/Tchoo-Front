@@ -7,7 +7,7 @@
 
 <header class="h-navbar-adjust pt-32 bg-sun-tornado-animated bg-fixed bg-cover bg-center lg:h-screen lg:flex lg:justify-center lg:flex-col">
     <img 
-        src="/img/banner/banner-white-transparent.png" 
+        src="/img/banner/banner-white.svg" 
         alt="The Tchoos banner"
         class="h-40 mx-auto lg:h-auto lg:w-9/12"
     />
