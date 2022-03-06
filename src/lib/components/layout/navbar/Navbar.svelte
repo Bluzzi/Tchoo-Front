@@ -37,7 +37,7 @@
         {#if $token}
             {#if $wallet}
                 <!-- Login and wallet linked -->
-                <Button theme="void" uppercase={false}>@{$username}</Button>
+                <Button theme="void" uppercase={false} href={"/profile/" + $username}>@{$username}</Button>
                 
                 <span class="w-2"></span>
                 
