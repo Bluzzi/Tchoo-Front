@@ -54,7 +54,7 @@
     <div class="w-96">
         <Card>
             <div class="flex items-center flex-col">
-                <Text size="xl">LINK WALLET</Text>
+                <span class="text-center"><Text size="xl">LINK WALLET</Text></span>
 
                 <div class="mt-4 flex flex-col items-center justify-between w-4/6 h-52">
                     <Button 
