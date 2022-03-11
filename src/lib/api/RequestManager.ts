@@ -2,7 +2,7 @@ import type { Response } from "$lib/utils/Fetch";
 
 export interface ResponseStatus<T> {
     success: boolean;
-    message: string;
+    message?: string;
     body?: T;
 }
 
@@ -44,5 +44,6 @@ const errorList = {
     "location.invalid": "Your location is invalid.",
     "feed.time_invalid": "You can't feed it at this point in time.",
     "sleep.time_invalid": "You can't put it to sleep or wake it up at this point in time.",
-    "lottery.not_enough_points": "You don't have enough points to buy a lottery ticket."
+    "lottery.not_enough_points": "You don't have enough points to buy a lottery ticket.",
+    "top.out_of_range": "This page does not exist."
 }
