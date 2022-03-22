@@ -16,7 +16,6 @@
     "@sveltejs/adapter-node": "^1.0.0-next.56",
     "@sveltejs/kit": "next",
     "@types/platform": "^1.3.4",
-    "@types/uuid": "^8.3.3",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
     "sass": "^1.45.1",
@@ -29,7 +28,9 @@
   },
   "dependencies": {
     "@elrondnetwork/erdjs": "^8.0.0",
+    "@types/three": "^0.138.0",
     "platform": "^1.3.6",
-    "svelte-local-storage-store": "^0.2.6"
+    "svelte-local-storage-store": "^0.2.6",
+    "three": "^0.138.3"
   }
 }
