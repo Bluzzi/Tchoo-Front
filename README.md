@@ -20,8 +20,12 @@
 - [ ] Error page
 - [x] Créer un composant line
 - [ ] Leaderboard :
-    - [ ] Accès à une page précise via un lien
+    - [x] Accès à une page précise via un lien
     - [ ] Possibilité de choisir sa page avec les ...
     - [ ] Responsive
 - [ ] Créer un composant Footer
 - [ ] Créer un composant PageBottom
+- [ ] Créer une page pour les tutoriels (qui fonctionne aussi à partir de fichier MD)
+- [ ] Faire la page pour les changements de mot de passe
+    - [ ] Page
+    - [ ] Request
