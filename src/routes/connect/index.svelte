@@ -25,7 +25,7 @@
 
 <Title text="Login"/>
 
-<div class="flex items-center justify-center h-navbar-adjust">
+<div class="grid place-content-center h-navbar-adjust">
     <div class="w-96 lg:w-11/12">
         <Card>
             <div class="flex items-center justify-between flex-col h-96">
