@@ -20,7 +20,7 @@
     const dispatch = createEventDispatcher();
 
     // Button CSS definition :
-    const baseStyle = `flex justify-center items-center text-white px-5 py-2 
+    const baseStyle = `flex justify-center items-center text-white px-2.5 py-2 
         rounded transition-all delay-75 hover:scale-98 relative`;
 
     const variantsStyle: { [key in Theme]: string } = {
