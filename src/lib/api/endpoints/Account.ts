@@ -34,6 +34,19 @@ export async function login(uname: string, password: string) : Promise<ResponseS
     });
 }
 
+export async function changePassword(oldPassword: string, newPassword: string) : Promise<ResponseStatus<Object>> {
+    const response = await jsonFetch(apiLink + "/account/change_password", {
+        method: "POST",
+        body: JSON.stringify({
+            token: get(token),
+            old_password: oldPassword,
+            new_password: newPassword
+        })
+    });
+
+    return await request(response, "Password change successful");
+}
+
 export async function logout() : Promise<ResponseStatus<Object>> {
     const response = await jsonFetch(apiLink + "/account/logout", {
         method: "POST",
@@ -46,7 +59,7 @@ export async function logout() : Promise<ResponseStatus<Object>> {
         username.set("");
         token.set("");
         wallet.set(null);
-    })
+    });
 }
 
 export async function linkWallet(address: string, signature: string) : Promise<ResponseStatus<Object>> {
