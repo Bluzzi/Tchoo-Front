@@ -2,6 +2,7 @@
     import Text from "$lib/components/elements/texts/Text.svelte";
     import Title from "$lib/components/elements/Title.svelte";
     import Leaderboard from "$lib/components/layout/Leaderboard.svelte";
+    import PageBottom from "$lib/components/space/PageBottom.svelte";
 </script>
 
 <Title text="Leaderboard"/>
@@ -11,3 +12,5 @@
 
     <Leaderboard/>
 </div>
+
+<PageBottom/>
