@@ -18,7 +18,7 @@
 <div 
     on:click={() => onClick()} 
 
-    class="flex items-center justify-center mx-0.5 h-10 
+    class="grid place-content-center mx-0.5 h-10 
         min-w-max w-10 rounded text-primary-1 text-base
         transition-all duration-500"
 
