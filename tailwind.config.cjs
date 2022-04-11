@@ -13,6 +13,8 @@ module.exports = {
                 2: "#990A27" // for gradiant
             },
 
+            "secondary": "#3F00FF",
+
             "purple": {
                 1: "#4F0E81", 
                 2: "#220836"
