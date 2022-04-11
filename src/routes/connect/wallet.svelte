@@ -9,6 +9,7 @@
     import { onMount } from "svelte";
     import { get } from "svelte/store";
     import { token } from "$lib/api/stores/Account";
+    import { isMobile } from "$lib/utils/Device";
 
     let appLogin: HTMLDivElement;
 
