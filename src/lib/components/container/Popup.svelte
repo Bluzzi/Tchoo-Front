@@ -21,8 +21,8 @@
 
 <div 
     class="fixed top-1/2 left-1/2 
-        -translate-x-1/2 -translate-y-1/2 z-30 flex 
-        items-center justify-center" 
+        -translate-x-1/2 -translate-y-1/2 z-30 
+        grid place-content-center md:w-11/12" 
     bind:this={card}
 >
     <Card>
@@ -30,8 +30,8 @@
             <span class="mr-5"><Text size="large">{title}</Text></span>
 
             <span 
-                class="bg-gray-2 h-10 w-14 rounded flex 
-                    items-center justify-center hover:bg-primary-1"
+                class="bg-gray-2 h-10 w-14 rounded grid 
+                    place-content-center hover:bg-primary-1"
                 on:click={() => removeCard()}
             >
                 <img 
