@@ -20,7 +20,6 @@
     // Page :
     let currentPage = 1;
     let maxPage = 1;
-    let pageDosentExist = false;
 
     // Functions :
     async function updateLeaderboard(start: number, end: number) : Promise<void> {
@@ -64,7 +63,7 @@
     });
 </script>
 
-<div class="w-8/12">
+<div class="w-8/12 lg:w-11/12">
     <Card pySize="small">
         <!-- Table header -->
         <div class="flex justify-between">
@@ -74,7 +73,9 @@
                 <Text size="large">NFT</Text>
             </div>
     
-            <Text size="large">Prestige Points</Text>
+            <span class="text-right">
+                <Text size="large">Prestige Points</Text>
+            </span>
         </div>
     
         <div class="-mx-6"><Line/></div>
