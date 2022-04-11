@@ -29,7 +29,7 @@
     }
 </script>
 
-<div class="flex">
+<div class="flex flex-wrap justify-center">
     {#each pageList as page}
         <PaginationItem active={page === currentPage} page={page} on:click={e => changePage(e)}/>
     {/each}
