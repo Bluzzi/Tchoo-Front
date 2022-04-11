@@ -8,7 +8,7 @@
 <Title text="Leaderboard"/>
 
 <div class="flex flex-col items-center">
-    <Text size="xl" header>LEADERBOARD</Text>
+    <Text size="xl-auto" header>LEADERBOARD</Text>
 
     <Leaderboard/>
 </div>

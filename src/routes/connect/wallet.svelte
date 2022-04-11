@@ -56,24 +56,26 @@
             <div class="flex items-center flex-col">
                 <span class="text-center"><Text size="xl">LINK WALLET</Text></span>
 
-                <div class="mt-4 flex flex-col items-center justify-between w-4/6 h-52">
+                <div class="mt-4 flex flex-col items-center justify-between w-4/6 gap-3">
                     <Button 
                         on:click={() => connect("maiar_app")} 
                         icon="/img/icon/wallet/app.svg" 
                         iconLeft fullWidth uppercase={false}
                     >Maiar App</Button>
 
-                    <Button 
-                        on:click={() => connect("maiar_extension")} 
-                        icon="/img/icon/wallet/extension.svg" 
-                        iconLeft fullWidth uppercase={false}
-                    >Maiar Extension</Button>
-
-                    <Button 
-                        on:click={() => connect("hardware")} 
-                        icon="/img/icon/wallet/ledger.svg" 
-                        iconLeft fullWidth uppercase={false}
-                    >Ledger</Button>
+                    {#if !isMobile()}
+                        <Button 
+                            on:click={() => connect("maiar_extension")} 
+                            icon="/img/icon/wallet/extension.svg" 
+                            iconLeft fullWidth uppercase={false}
+                        >Maiar Extension</Button>
+                        
+                        <Button 
+                            on:click={() => connect("hardware")} 
+                            icon="/img/icon/wallet/ledger.svg" 
+                            iconLeft fullWidth uppercase={false}
+                        >Ledger</Button>
+                    {/if}
 
                     <Button 
                         on:click={() => connect("web")} 
