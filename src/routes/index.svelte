@@ -1,6 +1,7 @@
 <script lang="ts">
     import Button from "$lib/components/elements/buttons/Button.svelte";
     import Title from "$lib/components/elements/Title.svelte";
+    import Footer from "$lib/components/layout/Footer.svelte";
 </script>
 
 <Title/>
@@ -26,3 +27,5 @@
 <section class="h-screen bg-gray-2">
     <!-- TODO -->
 </section>
+
+<Footer/>
