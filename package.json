@@ -13,7 +13,7 @@
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "^1.0.0-next.56",
+    "@sveltejs/adapter-node": "^1.0.0-next.73",
     "@sveltejs/kit": "next",
     "@types/platform": "^1.3.4",
     "autoprefixer": "^10.4.2",
