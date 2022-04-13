@@ -21,7 +21,7 @@
 >
     <!-- Title -->
     <div class="flex items-center">
-        <a href="/"><img src="/img/logo/logo-transparent.png" alt="logo" class="h-7 w-auto"></a>
+        <a href="/"><img src="/img/logo.png" alt="logo" class="h-7 w-auto"></a>
 
         <Button theme="void" href="/"><Text type="h1" size="large">THE TCHOOS</Text></Button>
     </div>
