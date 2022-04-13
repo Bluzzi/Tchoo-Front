@@ -22,7 +22,7 @@
 
 <Title text={"Error " + statusCode}/>
 
-<div class="grid place-content-center h-navbar-adjust">
+<div class="grid place-content-center h-navbar-adjust px-5 break-all">
     <Text size="xl">Error {statusCode}</Text>
     <Text size="large">{message}</Text>
 
