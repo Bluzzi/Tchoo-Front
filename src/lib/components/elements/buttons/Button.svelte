@@ -16,11 +16,14 @@
 
     export let iconLeft = false;
 
+    type Size = "normal" | "large";
+    export let size: Size = "normal";
+
     // Event dispatcher :
     const dispatch = createEventDispatcher();
 
     // Button CSS definition :
-    const baseStyle = `flex justify-center items-center text-white px-2.5 py-2 
+    const baseStyle = `flex justify-center items-center text-white
         rounded transition-all delay-75 hover:scale-98 relative`;
 
     const variantsStyle: { [key in Theme]: string } = {
@@ -28,13 +31,18 @@
         outline: "border border-primary-1 shadow-sm",
         void: ""
     }
+
+    const sizeStyle: { [key in Size]: string } = {
+        normal: "px-2.5 py-2",
+        large: "px-7 py-3"
+    }
 </script>
 
 <a 
     {href} target={target === "_blank" ? "_blank" : ""} 
     on:click={e => dispatch("click", { nativeEvent: e })}
     
-    class={baseStyle + " " + variantsStyle[theme]}
+    class={baseStyle + " " + variantsStyle[theme] + " " + sizeStyle[size]}
     class:uppercase={uppercase} class:w-full={fullWidth} 
     class:w-max={!fullWidth}
 >

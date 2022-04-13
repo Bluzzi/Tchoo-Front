@@ -19,7 +19,7 @@
         class="mx-auto mb-10 lg:w-11/12 lg:mb-32"
     />
 
-    <span class="w-max mx-auto block"><Button>Mint a NFT</Button></span>
+    <span class="w-max mx-auto block"><Button size="large">Mint a NFT</Button></span>
 
     <img src="/img/icon/navigation/down-arrows-white.svg" alt="scroll arrows indicator" class="h-6 w-6 mx-auto mt-9 animate-bounce">
 </header>
