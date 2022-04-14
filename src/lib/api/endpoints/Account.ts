@@ -106,7 +106,7 @@ export async function isWalletLinked() : Promise<ResponseStatus<Object>> {
 }
 
 export async function updateInfo() : Promise<ResponseStatus<Object>> {
-    const response = await jsonFetch(apiLink + "/account/get_infos", {
+    const response = await jsonFetch(apiLink + "/account/get_infos_by_token", {
         method: "POST",
         body: JSON.stringify({
             token: get(token)
