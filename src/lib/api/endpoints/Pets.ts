@@ -1,6 +1,7 @@
 import { jsonFetch } from "$lib/utils/Fetch";
 import { apiLink } from "../Information";
-import { request, ResponseStatus } from "../RequestManager";
+import { request } from "../RequestManager";
+import type { ResponseStatus } from "../RequestManager";
 
 export interface Leaderboard {
     total_count: number;

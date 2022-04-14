@@ -5,7 +5,8 @@
     import Loading from "$lib/components/elements/navigation/Loading.svelte";
     import Pagination from "../elements/navigation/pagination/Pagination.svelte";
     import Line from "../elements/geometry/Line.svelte";
-    import { getLeaderboard, NFT } from "$lib/api/endpoints/Pets";
+    import { getLeaderboard } from "$lib/api/endpoints/Pets";
+    import type { NFT } from "$lib/api/endpoints/Pets";
     import { browser } from "$app/env";
     import { getParam, updateParam } from "$lib/utils/Url";
     import { onMount } from "svelte";

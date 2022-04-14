@@ -1,6 +1,7 @@
 <script lang="ts">
     import PaginationItem from "./PaginationItem.svelte";
-    import { generatePageList, PageType } from "./Pagination";
+    import { generatePageList } from "./Pagination";
+    import type { PageType } from "./Pagination";
     import { createEventDispatcher } from "svelte";
 
     // Attribute :

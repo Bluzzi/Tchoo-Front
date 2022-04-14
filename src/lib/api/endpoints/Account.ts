@@ -1,7 +1,8 @@
 import { jsonFetch } from "$lib/utils/Fetch";
 import { apiLink } from "../Information";
 import { token, username, wallet } from "../stores/Account";
-import { request, ResponseStatus } from "../RequestManager";
+import { request } from "../RequestManager";
+import type { ResponseStatus } from "../RequestManager";
 import { get } from "svelte/store";
 
 export async function register(uname: string, password: string) : Promise<ResponseStatus<Object>> {
