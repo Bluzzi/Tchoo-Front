@@ -45,5 +45,6 @@ const errorList = {
     "feed.time_invalid": "You can't feed it at this point in time.",
     "sleep.time_invalid": "You can't put it to sleep or wake it up at this point in time.",
     "lottery.not_enough_points": "You don't have enough points to buy a lottery ticket.",
-    "top.out_of_range": "This page does not exist."
+    "top.out_of_range": "This page does not exist.",
+    "account.not_existing": "The account does not exist"
 }
