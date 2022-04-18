@@ -14,9 +14,9 @@
 </script>
 
 {#if type === "p"}
-    <p class={"text-white " + styles[size]} class:my-14={header}><slot/></p>
+    <p class={"text-white " + styles[size]} class:py-14={header}><slot/></p>
 {:else if type === "h2"}
-    <h2 class={"text-white " + styles[size]} class:my-14={header}><slot/></h2>
+    <h2 class={"text-white " + styles[size]} class:py-14={header}><slot/></h2>
 {:else}
-    <h1 class={"text-white " +  styles[size]} class:my-14={header}><slot/></h1>
+    <h1 class={"text-white " +  styles[size]} class:py-14={header}><slot/></h1>
 {/if}
