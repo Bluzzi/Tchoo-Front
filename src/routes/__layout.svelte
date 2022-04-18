@@ -1,6 +1,5 @@
 <script lang="ts">
     import Navbar from "$lib/components/layout/navbar/Navbar.svelte";
-    import MediaLinks from "$lib/components/layout/MediaLinks.svelte";
     import Notifications from "$lib/components/layout/notification/Notifications.svelte";
     import { updateConnection } from "$lib/api/stores/Account";
     import { onMount } from "svelte";
@@ -17,4 +16,3 @@
 
 <!-- Fixed components -->
 <Notifications/>
-<MediaLinks/>

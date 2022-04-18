@@ -2,9 +2,12 @@
     import Button from "$lib/components/elements/buttons/Button.svelte";
     import Title from "$lib/components/elements/Title.svelte";
     import Footer from "$lib/components/layout/Footer.svelte";
+    import MediaLinks from "$lib/components/layout/MediaLinks.svelte";
 </script>
 
 <Title/>
+
+<MediaLinks/>
 
 <header class="h-navbar-adjust pt-32 bg-sun-tornado-animated bg-fixed bg-cover bg-center lg:h-screen lg:flex lg:justify-center lg:flex-col">
     <img 
