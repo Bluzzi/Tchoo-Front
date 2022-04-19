@@ -17,5 +17,22 @@ export async function jsonFetch<T>(
     return {
         status: response.status,
         body: await response.json()
-    };
+    }
+}
+
+export async function textFetch(
+    link: string, request: RequestInit = {}, fetchFunc: Function|null = null
+) : Promise<Response<string>> {
+    let response;
+
+    if(fetchFunc){
+        response = await fetchFunc(link, request);
+    } else {
+        response = await fetch(link, request);
+    }
+
+    return {
+        status: response.status,
+        body: await response.text()
+    }
 }
