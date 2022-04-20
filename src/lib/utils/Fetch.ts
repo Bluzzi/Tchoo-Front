@@ -6,13 +6,7 @@ export interface Response<T> {
 export async function jsonFetch<T>(
     link: string, request: RequestInit = {}, fetchFunc: Function|null = null
 ): Promise<Response<T>> {
-    let response;
-
-    if(fetchFunc){
-        response = await fetchFunc(link, request);
-    } else {
-        response = await fetch(link, request);
-    }
+    const response = fetchFunc ? await fetchFunc(link, request) : await fetch(link, request);
 
     return {
         status: response.status,
@@ -20,16 +14,10 @@ export async function jsonFetch<T>(
     }
 }
 
-export async function textFetch(
-    link: string, request: RequestInit = {}, fetchFunc: Function|null = null
-) : Promise<Response<string>> {
-    let response;
+export let githubRaw = "https://raw.githubusercontent.com/Meta-Friend-Team/Tchoo-Documents/main/";
 
-    if(fetchFunc){
-        response = await fetchFunc(link, request);
-    } else {
-        response = await fetch(link, request);
-    }
+export async function textFetch(link: string, fetchFunc: Function|null = null) : Promise<Response<string>> {
+    const response = fetchFunc ? await fetchFunc(link) : await fetch(link);
 
     return {
         status: response.status,
