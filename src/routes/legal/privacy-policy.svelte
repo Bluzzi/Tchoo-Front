@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { textFetch } from "$lib/utils/Fetch";
+    import { githubRaw, textFetch } from "$lib/utils/Fetch";
     import Loading from "$lib/components/elements/navigation/Loading.svelte";
     import Markdown from "$lib/components/container/markdown/Markdown.svelte";
     import Card from "$lib/components/container/Card.svelte";
@@ -7,7 +7,7 @@
     import Text from "$lib/components/elements/texts/Text.svelte";
     import PageBottom from "$lib/components/space/PageBottom.svelte";
 
-    let sourceMd = textFetch("/documents/legal/Privacy-Policy-EN.md");
+    const sourceMd = textFetch(githubRaw + "/legal/privacy/Privacy-Policy-EN.md");
 </script>
 
 <Title text="Privacy Policy"/>
