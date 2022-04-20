@@ -31,6 +31,7 @@
         <NavItem route="/lottery">Lottery</NavItem>
         <NavItem route="/leaderboard">Leaderboard</NavItem>
         <NavItem route="/the-lab">The lab</NavItem>
+        <NavItem route="/blog">Blog</NavItem>
     </ul>
 
     <div class="flex lg:flex-col lg:items-center">
