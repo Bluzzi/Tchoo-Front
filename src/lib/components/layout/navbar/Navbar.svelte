@@ -59,7 +59,6 @@
             {/if}
         {:else}
             <!-- Not login -->
-            <!-- svelte-ignore missing-declaration -->
             <Button theme="void" on:click={() => gotoConnection("login", window.location)}>Login</Button>
 
             <span class="w-2"></span>
