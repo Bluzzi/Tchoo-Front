@@ -1,6 +1,5 @@
 <script lang="ts">
     import { browser } from "$app/env";
-    import { goto } from "$app/navigation";
     import type { BlogCategory } from "$lib/api/documents/Blog";
     import Card from "$lib/components/container/Card.svelte";
     import Loading from "$lib/components/elements/navigation/Loading.svelte";
@@ -50,7 +49,7 @@
     <span class="grid place-content-center"><Loading/></span>
 {:then value}
     {#if value.status === 200}
-        <div class="flex justify-center items-center w-full gap-16">
+        <div class="flex justify-center items-center w-full gap-16 flex-wrap md:gap-8">
             {#each value.body as category}
                 {@const icon = getIcon(category.folder, category.icon)}
 
@@ -75,15 +74,17 @@
             <div class="flex items-center justify-center flex-col gap-6">
                 {#each currentCategory.posts as post}
                     <a 
-                        class="w-3/4" 
+                        class="w-3/4 md:w-11/12" 
                         href={
                             "/blog/" + currentCategory.name.toLocaleLowerCase() + 
                             "/" + post.name.toLocaleLowerCase().replace(/ /g, "-")
                         }
                     >
                         <Card clickable>
-                            <div class="flex justify-between items-center">
-                                <Text type="h2" size="large">{post.name}</Text>
+                            <div class="flex justify-between items-center lg:flex-col">
+                                <span class="text-center">
+                                    <Text type="h2" size="large">{post.name}</Text>
+                                </span>
                                 <Text>{post.date}</Text>
                             </div>
                         </Card>
