@@ -16,7 +16,7 @@
     <Text header size="xl-auto">Privacy Policy</Text>
 </span>
 
-<div class="w-10/12 sm:w-11/12 mx-auto mt">
+<div class="w-10/12 sm:w-11/12 mx-auto">
     <Card>
         <div class="flex flex-col gap-4">
             {#await sourceMd}
