@@ -1,6 +1,6 @@
 import { jsonFetch } from "$lib/utils/Fetch";
 import { apiLink } from "../Information";
-import { token, username, wallet } from "../stores/Account";
+import { token, username, wallet, type Wallet } from "../stores/Account";
 import { request } from "../RequestManager";
 import type { ResponseStatus } from "../RequestManager";
 import { get } from "svelte/store";
@@ -116,9 +116,14 @@ export async function updateInfo() : Promise<ResponseStatus<Object>> {
     return await request(response, "Account informations updated", () => {
         username.set(response.body["username"]);
 
-        const walletData = get(wallet);
-        walletData.address = response.body["wallet"];
+        if(response.body["wallet"]){
+            const walletData: Wallet = get(wallet) ?? {
+                address: response.body["wallet"]
+            }
+            
+            walletData.address = response.body["wallet"];
 
-        wallet.set(walletData);
+            wallet.set(walletData);
+        }
     });
 }
