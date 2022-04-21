@@ -3,6 +3,8 @@ export interface Response<T> {
     body: T;
 }
 
+export let githubRaw = "https://raw.githubusercontent.com/Meta-Friend-Team/Tchoo-Documents/main/";
+
 export async function jsonFetch<T>(
     link: string, request: RequestInit = {}, fetchFunc: Function|null = null
 ): Promise<Response<T>> {
@@ -13,8 +15,6 @@ export async function jsonFetch<T>(
         body: await response.json()
     }
 }
-
-export let githubRaw = "https://raw.githubusercontent.com/Meta-Friend-Team/Tchoo-Documents/main/";
 
 export async function textFetch(link: string, fetchFunc: Function|null = null) : Promise<Response<string>> {
     const response = fetchFunc ? await fetchFunc(link) : await fetch(link);
