@@ -4,7 +4,7 @@ import { isTokenValid, updateInfo } from "../endpoints/Account";
 import { gotoConnection } from "$lib/utils/Redirect";
 import type { WalletProviderId } from "$lib/maiar/wallet/WalletTypes";
 
-interface Wallet {
+export interface Wallet {
     providerId?: WalletProviderId;
     address: string;
     signature?: string;
