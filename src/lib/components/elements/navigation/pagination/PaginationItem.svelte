@@ -24,13 +24,14 @@
 
             setTimeout(() => input.focus(), 50);
         } else {
+            input.value = "";
             inputActived = false;
-            input.textContent = "";
         }
     }
 
     function inputEnter(event: KeyboardEvent) : void {
         if(event.key === "Enter"){
+            setInputState("desactived");
             disptach("click", { page: +(event.target as HTMLInputElement).value });
         }
     }
