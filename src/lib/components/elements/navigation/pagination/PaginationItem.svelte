@@ -9,14 +9,35 @@
     // Create disptacher :
     const disptach = createEventDispatcher();
 
-    // Events :
-    function onClick(){
+    // Change page :
+    function changePage() : void {
         if(!active && page !== "...") disptach("click", { page: page });
+    }
+
+    // Input :
+    let input: HTMLInputElement;
+    let inputActived = false;
+
+    function setInputState(state: "actived" | "desactived") : void {
+        if(state === "actived"){
+            inputActived = true;
+
+            setTimeout(() => input.focus(), 50);
+        } else {
+            inputActived = false;
+            input.textContent = "";
+        }
+    }
+
+    function inputEnter(event: KeyboardEvent) : void {
+        if(event.key === "Enter"){
+            disptach("click", { page: +(event.target as HTMLInputElement).value });
+        }
     }
 </script>
 
 <div 
-    on:click={() => onClick()} 
+    on:click={() => changePage()} 
 
     class="grid place-content-center mx-0.5 h-10 
         min-w-max w-10 rounded text-primary-1 text-base
@@ -36,7 +57,17 @@
     {:else if page === "next"}
         <p class="px-2">Next &gt;</p>
     {:else if page === "..."}
-        <p>...</p>
+        <p on:click={() => setInputState("actived")} class:hidden={inputActived}>...</p>
+
+        <input 
+            type="text" bind:this={input} 
+            on:blur={() => setInputState("desactived")} 
+            class:hidden={!inputActived}
+            on:keyup={e => inputEnter(e)}
+            maxlength="2" pattern="[0-9]+"
+            class="rounded outline-none px-1 py-2 border-lg w-12 text-center
+                cursor-pointer border-white focus:border-primary-1"
+        >
     {:else}
         <p>{page}</p>
     {/if}
