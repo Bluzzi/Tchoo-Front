@@ -31,8 +31,8 @@
 
     function inputEnter(event: KeyboardEvent) : void {
         if(event.key === "Enter"){
+            disptach("click", { page: input.value });
             setInputState("desactived");
-            disptach("click", { page: +(event.target as HTMLInputElement).value });
         }
     }
 </script>
