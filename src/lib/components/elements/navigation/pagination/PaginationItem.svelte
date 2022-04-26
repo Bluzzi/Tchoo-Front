@@ -66,10 +66,10 @@
             class:hidden={!inputActived}
             on:keyup={e => inputEnter(e)}
             maxlength="2" pattern="[0-9]+"
-            class="rounded outline-none px-1 py-2 border-lg w-12 text-center
+            class="rounded outline-none px-1 py-2 border-lg w-12 text-center text-black
                 cursor-pointer border-white focus:border-primary-1"
         >
-    {:else}
+    {:else} 
         <p>{page}</p>
     {/if}
 </div>
