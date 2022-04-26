@@ -13,7 +13,7 @@
 {#if parent}
     {#if parent.type === "heading" && element.type === "text"}
         {#if parent.depth === 1}
-            <span class="text-center"><Text size="xl">{element.value}</Text></span>
+            <Text size="xl">{element.value}</Text>
         {:else}
             <Text size="large">{element.value}</Text>
         {/if}
@@ -22,10 +22,12 @@
     {:else if parent.type === "paragraph"}
         {#if element.type === "strong" && element.children[0].type === "text"}
             <strong>{element.children[0].value}</strong>
-        {:else if element.type === "text"}
-            {element.value}
+        {:else if element.type === "emphasis" && element.children[0].type === "text"}
+            <em>{element.children[0].value}</em>
         {:else if element.type === "link" && element.children[0].type === "text"}
             <Link href={element.url} target="external">{element.children[0].value}</Link>
+        {:else if element.type === "text"}
+            {element.value}
         {/if}
     {:else if element.type === "listItem"}
         {#each element.children as item}
