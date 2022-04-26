@@ -43,7 +43,7 @@
 
 <Title text="Blog"/>
 
-<span class="text-center"><Text size="xl-auto" header>Blog</Text></span>
+<span class="text-center"><Text size="xxl-auto" header>Blog</Text></span>
 
 {#await response}
     <span class="grid place-content-center"><Loading/></span>

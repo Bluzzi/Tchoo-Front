@@ -13,7 +13,7 @@
 <Title text="Privacy Policy"/>
 
 <span class="text-center">
-    <Text header size="xl-auto">Privacy Policy</Text>
+    <Text header size="xxl-auto">Privacy Policy</Text>
 </span>
 
 <div class="w-10/12 sm:w-11/12 mx-auto">

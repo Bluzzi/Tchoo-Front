@@ -13,7 +13,7 @@
 <Title text="General Conditions of Sale"/>
 
 <span class="text-center">
-    <Text header size="xl-auto">General Conditions of Sale</Text>
+    <Text header size="xxl-auto">General Conditions of Sale</Text>
 </span>
 
 <div class="w-10/12 sm:w-11/12 mx-auto">

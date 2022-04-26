@@ -29,7 +29,7 @@
     <div class="w-96 lg:w-11/12">
         <Card>
             <div class="flex items-center justify-between flex-col h-96">
-                <Text size="xl">REGISTER</Text>
+                <Text size="xxl">REGISTER</Text>
     
                 <div class="h-40 flex justify-between flex-col w-10/12">
                     <Input title="Username" type="username" bind:value={username}/>

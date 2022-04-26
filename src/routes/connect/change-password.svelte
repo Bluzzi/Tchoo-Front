@@ -29,7 +29,7 @@
     <div class="w-96 lg:w-11/12">
         <Card>
             <div class="flex items-center justify-between flex-col">
-                <span class="text-center"><Text size="xl">CHANGE PASSWORD</Text></span>
+                <span class="text-center"><Text size="xxl">CHANGE PASSWORD</Text></span>
     
                 <div class="h-40 flex justify-between flex-col w-10/12 my-6">
                     <Input title="Old password" type="password" bind:value={oldPassword}/>

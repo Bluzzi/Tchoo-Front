@@ -34,8 +34,9 @@ module.exports = {
             "sm": "15px",
             "base": "20px",
             "lg": "28px",
-            "xl": "56px",
-            "xl-auto": "calc(1.5em + 3.6vw)"
+            "xl": "36px",
+            "xxl": "56px",
+            "xxl-auto": "calc(1.5em + 3.6vw)"
         },
 
         backgroundImage: {

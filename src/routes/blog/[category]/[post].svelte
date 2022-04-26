@@ -64,7 +64,7 @@
 {:else}
     {#if categoryInstance && postInstance && postMd}
         <span class="text-center">
-            <Text header size="xl-auto">{postInstance.name}</Text>
+            <Text header size="xxl-auto">{postInstance.name}</Text>
         </span>
 
         <div class="w-10/12 sm:w-11/12 mx-auto">
