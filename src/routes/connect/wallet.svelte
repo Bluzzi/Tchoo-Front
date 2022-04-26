@@ -70,12 +70,6 @@
                             icon="/img/icon/wallet/extension.svg" 
                             iconLeft fullWidth uppercase={false}
                         >Maiar Extension</Button>
-                        
-                        <Button 
-                            on:click={() => connect("hardware")} 
-                            icon="/img/icon/wallet/ledger.svg" 
-                            iconLeft fullWidth uppercase={false}
-                        >Ledger</Button>
                     {/if}
 
                     <Button 
